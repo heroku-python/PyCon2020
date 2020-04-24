@@ -167,27 +167,58 @@ You have an app!
 
 This app will receive your codebase as a slug. It's where all the environment variables get set, all the connections are specified. Once we've pushed your code to your app, you'll be able to scale up dynos - which run those separate processes from above!
 
-Before moving on, go ahead and grab the name of your site - it'll be something like `warm-springs-95291.herokuapp.com`. 
+Before moving on, go ahead and grab the name of your site - it'll be something like `enigmatic-taiga-57440.herokuapp.com`. 
 
-## Heroku Config
+## Step 7: Heroku Config
 
 Before we push the code up, let's set the config vars (or we'll see errors!)
 
 You can remind yourself what environment variables we need by looking at your `heroku.py` file, but to get this project ready to run, you can use the CLI `heroku config` command.
 
 ```
-heroku config ALLOWED_HOSTS=your-app-name.com
-heroku config DJANGO_SETTINGS_MODULE=dynowiki.settings.heroku
+heroku config:set ALLOWED_HOSTS=enigmatic-taiga-57440.herokuapp.com
+heroku config:set DJANGO_SETTINGS_MODULE=gettingstarted.settings.heroku
 ```
 For the SECRET_KEY, you'll need to generate a new secret. For this demo, it doesn't matter what it is - it's great to use a secure hash generator, or a password manager's generator. Just be sure to keep this value secure, don't reuse it, and NEVER check it into source code!
 
 ```
-heroku config SECRET_KEY=YOURSECUREGENERATEDPASSWORD
+heroku config:set SECRET_KEY=YOURSECUREGENERATEDPASSWORD
 ```
 Lastly, Heroku will automatically detect the number of concurrent processes you want to run on each dyno. Depending on the resource usage of your process, this can make each dyno handle more requests more quickly - but for now, let's stick to one process.
 
 ```
-heroku config WEB_CONCURRENCY=1
+heroku config:set WEB_CONCURRENCY=1
+```
+
+## Step 8: Provision a Database
+
+The last thing we need to do is provision a database. If you run:
+
+```
+heroku addons
+```
+
+And see:
+
+```
+No add-ons for app enigmatic-taiga-57440
+```
+
+This means we need to add the database on to our Heroku app. Let's create a free Postgres database with the following command:
+
+```
+heroku addons:create heroku-postgresql:hobby-dev
+```
+
+And you'll see Heroku spin up and attach the resource for you:
+
+```
+Creating heroku-postgresql:hobby-dev on ⬢ enigmatic-taiga-57440... free
+Database has been created and is available
+ ! This database is empty. If upgrading, you can transfer
+ ! data from another database with pg:copy
+Created postgresql-clean-67950 as DATABASE_URL
+Use heroku addons:docs heroku-postgresql to view documentation
 ```
 
 ## Heroku Deploy
@@ -214,7 +245,7 @@ heroku ps:scale web=1
 heroku open
 ```
 
-Tada!! It's a dynowiki!
+Tada!! You've done it!
 
 ## Logs
 
