@@ -51,14 +51,13 @@ Navigate to `wsgi.py`, located in `yourproject/`. You'll see a similar line ther
 
 >If you set the project up to run locally and have issues with the settings module after this step, you can use an untracked `.env` to set the `DJANGO_SETTINGS_MODULE` variable in your local environment.
 
-## 3 Changes to local.py
+## 3 Changes to settings/base.py
 
-For twelve factor deployment and deployment on Heroku, a few changes are needed in your `local.py` file.
+For twelve factor deployment and deployment on Heroku, a few changes are needed in your `base.py` file.
 
 ### Whitenoise
 
-[Whitenoise](http://whitenoise.evans.io/en/stable/django.html#using-whitenoise-with-django) is a package for managing static assets, installed  
-our `requirements.txt` file, so it'll automatically get installed when we deploy but we still have to install it as middleware.
+[Whitenoise](http://whitenoise.evans.io/en/stable/django.html#using-whitenoise-with-django) is a package for managing static assets. If you check, you can see it in our `requirements.txt` file, so it'll automatically get installed when we deploy to Heroku thanks to the Python Buildpack - but we still have to install it as middleware in our Django application.
 
 Scroll to the `MIDDLEWARE` list and place the following line at index 1, or 2nd in the list:
 
