@@ -127,7 +127,7 @@ You'll also see in our `requirements.txt` file that we have [`psycopg2`](http://
 
 A key factor of a 12 Factor App is that the dependencies needed for the application are explicitly declared. We've done that with two files. One is the standard Pip dependency file `requirements.txt`, which we've already looked at.
 
-The other is `runtime.txt`, here specifying `python-3.7.3`. This tells the Heroku Python Buildpack to install that specific version of Python 3 into your application's environment before the application is built. You can leave out this file - but the buildpack would then install the default, which is currently set as the latest patchved version of 3.6.
+The other is `runtime.txt`, here specifying `python-3.8.2`. This tells the Heroku Python Buildpack to install that specific version of Python 3 into your application's environment before the application is built. You can leave out this file - but the buildpack would then install the default version. The default version installed is documented on [Devcenter](https://devcenter.heroku.com/articles/python-support#specifying-a-python-version).
 
 ## 5 The Procfile
 
