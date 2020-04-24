@@ -1,6 +1,6 @@
 # From Project to Productionized on Heroku
 
-###### Workshop presented by Casey Faist @ PyCon 2019
+###### Workshop presented by Casey Faist @ Virtual PyCon 2020
 
 Updated for the PyCon 2020 Virtual Heroku Workshop, this project demonstrates the principles of 12 Factor Architecture and the basic steps most Django applications need to achieve that in your application for deploying to production. Heroku is our deployment server, but the principles demonstrated are applicable to any deployment schema and are a best practice for building robust, quick-recover applications in the cloud.
 
