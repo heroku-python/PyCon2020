@@ -10,9 +10,9 @@ This project utilizes the [Getting Started with Python on Heroku](https://github
 
 ## Prerequisites
 
-[ ] Signup for [Heroku](https://signup.heroku.com/)
-[ ] Install the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli#download-and-install)
-[ ] Clone this Repo
+1. Signup for a Free [Heroku](https://signup.heroku.com/) Account
+2. Install the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli#download-and-install)
+3. Clone this Repo
 
 ## Step 1: Update the .gitignore
 
