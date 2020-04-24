@@ -1,0 +1,4 @@
+django
+gunicorn
+whitenoise
+psycopg2
