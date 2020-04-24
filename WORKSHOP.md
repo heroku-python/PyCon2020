@@ -83,7 +83,7 @@ Production Settings for Heroku
 import environ
 
 # If using in your own project, update the project namespace below
-from dynowiki.settings.local import * 
+from gettingstarted.settings.base import * 
 
 env = environ.Env(
     # set casting, default value
@@ -106,6 +106,8 @@ DATABASES = {
     'default': env.db(),
 }
 ```
+
+You'll see on line 8 we're importing our `gettingstarted.settings` config - make sure to update `base` to whatever you named your first settings file.
 
 ### 4.a Django-Environ
 
