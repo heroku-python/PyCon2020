@@ -43,7 +43,7 @@ directory called `settings/`. Place your `settings.py` file into that new dir an
 
 ### 2.b
 
-Now navigate to your `manage.py`. Somewhere around the 6th line, you'll see the main process setting the default `DJANGO_SETTINGS_MODULE` to `yourproject.settings`. Update that to `yourproject.settings.local`, or whatever you named your local settings file.
+Now navigate to your `manage.py`. Somewhere around the 6th line, you'll see the main process setting the default `DJANGO_SETTINGS_MODULE` to `yourproject.settings`. Update that to `yourproject.settings.base`, or whatever you named your local settings file.
 
 ### 2.c
 
