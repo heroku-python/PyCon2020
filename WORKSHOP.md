@@ -24,7 +24,6 @@ In addition to whatever you'd normally place in your .gitignore, be sure to [unt
 /your-venv-directory        # Learn how to create a local environment in LOCALSETUP.md
 __pycache__
 db.sqlite3                  # not needed if you're using Postgres locally
-media/
 yourapp/static/
 ```
 
@@ -40,7 +39,7 @@ Commit this and untrack files as necessary, and you're good to go.
 This step is pretty straight forward, but can lead to errors if you forget to update all the references. 
 
 In the same directory that your `settings.py` file is located, create a new
-directory called `settings/`. Place your `settings.py` file into that new dir and rename it - I chose `local.py`, but you can use `dev.py` or whatever makes sense to you.
+directory called `settings/`. Place your `settings.py` file into that new dir and rename it - I chose `base.py`, but you can use `dev.py` or whatever makes sense to you.
 
 ### 2.b
 
