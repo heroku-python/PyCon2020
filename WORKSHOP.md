@@ -221,7 +221,7 @@ Created postgresql-clean-67950 as DATABASE_URL
 Use heroku addons:docs heroku-postgresql to view documentation
 ```
 
-## Heroku Deploy
+## Step 9: Heroku Deploy
 
 Alright. It's all led to this. It is time to [deploy to Heroku!](https://devcenter.heroku.com/articles/deploying-python)
 
