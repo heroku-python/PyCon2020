@@ -139,7 +139,7 @@ Create a file named `Procfile` at your project's root directory (the same level 
 
 ```
 release: python3 manage.py migrate
-web: gunicorn dynowiki.wsgi --preload --log-file -
+web: gunicorn gettingstarted.wsgi --preload --log-file -
 ```
 
 There! We've defined two processes. 
