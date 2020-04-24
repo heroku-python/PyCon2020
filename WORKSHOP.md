@@ -153,7 +153,7 @@ The [release phase](https://devcenter.heroku.com/articles/release-phase) occurs 
 This process is what actually serves our application. [Gunicorn](https://devcenter.heroku.com/articles/python-gunicorn) is a WSGI Server package, you'll see it declared in our `requirements.txt` file. The command specified here is pretty basic - you can specify max connections, number of workers and a host of other features and Heroku will run them automatically. Check out the [Gunicorn docs](https://docs.gunicorn.org/en/latest/settings.html) for more settings options that your application likely does not need.
 
 
-## Heroku Create!
+## Step 6: Heroku Create!
 
 It's finally time! First, make sure that all these changes are checked into git.
 
@@ -167,7 +167,7 @@ You have an app!
 
 This app will receive your codebase as a slug. It's where all the environment variables get set, all the connections are specified. Once we've pushed your code to your app, you'll be able to scale up dynos - which run those separate processes from above!
 
-Before moving on, go ahead and grab the name of your site - it'll be something like `serene-caverns-99999.com`. 
+Before moving on, go ahead and grab the name of your site - it'll be something like `warm-springs-95291.herokuapp.com`. 
 
 ## Heroku Config
 
