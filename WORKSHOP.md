@@ -10,7 +10,7 @@ This project utilizes the [Getting Started with Python on Heroku](https://github
 
 ## Prerequisites
 
-1. Signup for a Free [Heroku](https://signup.heroku.com/) Account
+1. Signup for [Heroku](https://signup.heroku.com/)
 2. Install the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli#download-and-install)
 3. Clone this Repo
 
@@ -61,13 +61,13 @@ For twelve factor deployment and deployment on Heroku, a few changes are needed 
 
 Scroll to the `MIDDLEWARE` list and place the following line at index 1, or 2nd in the list:
 
-`'whitenoise.middleware.WhiteNoiseMiddleware',`
+`"whitenoise.middleware.WhiteNoiseMiddleware",`
 
 The order that middleware is loaded is important, which is why we need to add this change to our local.py file. More on that in a bit.
 
-For local-prod parity, let's enable WhiteNoise's [caching and compression](http://whitenoise.evans.io/en/stable/django.html#add-compression-and-caching-support) locally by adding the following line to the bottom of your `local.py`:
+For local-prod parity, let's enable WhiteNoise's [caching and compression](http://whitenoise.evans.io/en/stable/django.html#add-compression-and-caching-support) locally by adding the following line to the bottom of your `base.py`:
 
-`STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'`
+`STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"`
 
 ## Step 4: heroku.py
 
@@ -89,8 +89,6 @@ env = environ.Env(
     # set casting, default value
     DEBUG=(bool, False)
 )
-# # reading .env file
-# environ.Env.read_env()
 
 # False if not in os.environ
 DEBUG = env('DEBUG')
